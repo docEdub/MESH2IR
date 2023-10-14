@@ -245,6 +245,7 @@ def save_RIR_results(data_RIR, fake, epoch, RIR_dir):
             fake_IR = np.array(fake[i].to("cpu").detach())
             f = WaveWriter(fake_RIR_path, channels=1, samplerate=fs)
             f.write(np.array(fake_IR))
+            f.close()
             
             # write(fake_RIR_path,fs,fake[i].astype(np.float32))
 
