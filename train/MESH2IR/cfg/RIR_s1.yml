@@ -2,7 +2,7 @@ CONFIG_NAME: 'stageI'
 
 DATASET_NAME: 'RIR'
 EMBEDDING_TYPE: 'cnn-rnn'
-GPU_ID: '0,1'
+GPU_ID: '0'
 DATA_DIR: '../dataset'
 
 # NET_G: '../generate/netG_epoch_20.pth'
@@ -11,14 +11,17 @@ DATA_DIR: '../dataset'
 
 # EVAL_DIR: '../generate/embeddings/'
 RIRSIZE: 4096
-WORKERS: 32
+#WORKERS: 32
+WORKERS: 16
 STAGE: 1
 TRAIN:
     FLAG: True
     BATCH_SIZE: 128
-    MAX_EPOCH: 2000
+    #MAX_EPOCH: 2000
+    MAX_EPOCH: 175
     LR_DECAY_EPOCH: 7
-    SNAPSHOT_INTERVAL: 25
+    #SNAPSHOT_INTERVAL: 25
+    SNAPSHOT_INTERVAL: 5
     # DISCRIMINATOR_LR: 0.000004
     # GENERATOR_LR: 0.000004
     # MESH_LR: 0.000004

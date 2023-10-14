@@ -104,7 +104,7 @@ def evaluate():
 
     netG_path = "Models/MESH2IR/netG_epoch_175.pth"
     mesh_net_path = "Models/MESH2IR/mesh_net_epoch_175.pth"
-    gpus =[0,1]
+    gpus =[0]
 
     batch_size = 256
     fs = 16000
@@ -187,6 +187,7 @@ def evaluate():
                 fake_IR = fake_IR_only*fake_energy
                 f = WaveWriter(fake_RIR_path, channels=1, samplerate=fs)
                 f.write(np.array(fake_IR))
+                f.close()
 
 
 evaluate()

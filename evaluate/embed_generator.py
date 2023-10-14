@@ -53,8 +53,11 @@ for file in mesh_files:
 	filler = 256  - (len(embedding_list) % 256)
 	len_embed_list = len(embedding_list) -1
 	if(filler < 256):
+		j = 0
 		for i in range(filler):
-			embedding_list.append(embedding_list[len_embed_list-filler+i])
+			embedding_list.append(embedding_list[len_embed_list+j])
+			j += 1
+			j = j % (len_embed_list + 1)
 	print("embdiing_list123", len(embedding_list))
 
 
