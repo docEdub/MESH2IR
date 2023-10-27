@@ -9,9 +9,9 @@ DATA_DIR: '../dataset'
 # NET_D: '../generate/netD_epoch_last.pth'
 # MESH_NET: '../generate/mesh_net_epoch_20.pth'
 
-NET_G: '/home/andy/-/code/mesh2ir/train/output/MESH2IR_RIR_stageI_2023_10_15_17_20_06/Model/netG_epoch_175.pth'
-NET_D: '/home/andy/-/code/mesh2ir/train/output/MESH2IR_RIR_stageI_2023_10_15_17_20_06/Model/netD_epoch_last.pth'
-MESH_NET: '/home/andy/-/code/mesh2ir/train/output/MESH2IR_RIR_stageI_2023_10_15_17_20_06/Model/mesh_net_epoch_175.pth'
+#NET_G: '/home/andy/-/code/mesh2ir/train/output/MESH2IR_RIR_stageI_2023_10_15_17_20_06/Model/netG_epoch_175.pth'
+#NET_D: '/home/andy/-/code/mesh2ir/train/output/MESH2IR_RIR_stageI_2023_10_15_17_20_06/Model/netD_epoch_last.pth'
+#MESH_NET: '/home/andy/-/code/mesh2ir/train/output/MESH2IR_RIR_stageI_2023_10_15_17_20_06/Model/mesh_net_epoch_175.pth'
 
 # EVAL_DIR: '../generate/embeddings/'
 RIRSIZE: 4096

@@ -102,11 +102,13 @@ def evaluate():
     graph_directory = "Mesh_Graphs/"
     output_directory ="Output/"
 
-    netG_path = "Models/MESH2IR/netG_epoch_175.pth"
-    mesh_net_path = "Models/MESH2IR/mesh_net_epoch_175.pth"
+    # netG_path = "Models/MESH2IR/netG_epoch_175.pth"
+    # mesh_net_path = "Models/MESH2IR/mesh_net_epoch_175.pth"
+    netG_path = "Models/MESH2IR/netG_epoch_24.pth"
+    mesh_net_path = "Models/MESH2IR/mesh_net_epoch_24.pth"
     gpus =[0]
 
-    batch_size = 256
+    batch_size = 128
     fs = 16000
 
 

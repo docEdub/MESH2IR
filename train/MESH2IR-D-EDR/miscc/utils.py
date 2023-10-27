@@ -227,9 +227,10 @@ def save_RIR_results(data_RIR, fake, epoch, RIR_dir):
          
             r = WaveWriter(real_RIR_path, channels=1, samplerate=fs)
             r.write(np.array(real_IR))
+            r.close()
             f = WaveWriter(fake_RIR_path, channels=1, samplerate=fs)
             f.write(np.array(fake_IR))           
-
+            f.close()
 
             # write(real_RIR_path,fs,real_IR)
             # write(fake_RIR_path,fs,fake_IR)
@@ -253,6 +254,7 @@ def save_RIR_results(data_RIR, fake, epoch, RIR_dir):
             fake_IR = np.array(fake[i].to("cpu").detach())
             f = WaveWriter(fake_RIR_path, channels=1, samplerate=fs)
             f.write(np.array(fake_IR))
+            f.close()
             
             # write(fake_RIR_path,fs,fake[i].astype(np.float32))
 
@@ -291,9 +293,11 @@ def save_RIR_results_eval(data_RIR, fake,txt_embedding,path, RIR_dir):
             # print("energy ", energy_factor)
             if(energy_factor<2 and energy_factor>0.5):         
                 r = WaveWriter(real_RIR_path, channels=1, samplerate=fs)
+                r.close()
                 r.write(np.array(real_IR))
                 f = WaveWriter(fake_RIR_path, channels=1, samplerate=fs)
                 f.write(np.array(fake_IR))           
+                f.close()
 
 
 def save_model(netG, netD,mesh_net, epoch, model_dir):
