@@ -33,7 +33,7 @@ instr 1
 
         kUpdateIr = 0
 
-        if (kIrDuration > 0.025) then // switch 4 times a second
+        if (kIrDuration > 0.025) then // switch 40 times a second
             kIrTableIdIndex += 1
             
             event("i", "SetIrTable", 0, 1, kIrTableIdIndex)
