@@ -9,10 +9,16 @@ import torch
 import torch_geometric
 from torch_geometric.io import read_ply
 
-path = "Simplified_Meshes/"
-move_path = "Mesh_Graphs/"
+from torch_geometric.plyfile import PlyData
 
-os.mkdir(move_path)
+path = "evaluate/Simplified_Meshes/"
+move_path = "evaluate/Mesh_Graphs/"
+
+print(os.getcwd())
+
+if not os.path.exists(move_path):
+	os.mkdir(move_path)
+
 mesh_files = os.listdir(path)
 print("mesh files ",mesh_files)
 for file in mesh_files:

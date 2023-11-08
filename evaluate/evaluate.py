@@ -104,8 +104,10 @@ def evaluate():
 
     # netG_path = "Models/MESH2IR/netG_epoch_175.pth"
     # mesh_net_path = "Models/MESH2IR/mesh_net_epoch_175.pth"
-    netG_path = "Models/MESH2IR/netG_epoch_24.pth"
-    mesh_net_path = "Models/MESH2IR/mesh_net_epoch_24.pth"
+    # netG_path = "Models/MESH2IR/netG_epoch_24.pth"
+    # mesh_net_path = "Models/MESH2IR/mesh_net_epoch_24.pth"
+    netG_path = "Models/MESH2IR-D-EDR/netG_epoch_483.pth"
+    mesh_net_path = "Models/MESH2IR-D-EDR/mesh_net_epoch_483.pth"
     gpus =[0]
 
     batch_size = 128
