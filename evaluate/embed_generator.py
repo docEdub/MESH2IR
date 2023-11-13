@@ -8,8 +8,11 @@ import math
 
 
 embedding_list=[]
-os.mkdir("Embeddings")
-path = "Paths/"
+
+if not os.path.exists("evaluate/Embeddings"):
+	os.mkdir("evaluate/Embeddings")
+
+path = "evaluate/Paths/"
 mesh_files = os.listdir(path)
 
 embed_c = 0

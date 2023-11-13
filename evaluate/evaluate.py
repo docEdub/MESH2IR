@@ -98,16 +98,16 @@ def load_embedding(data_dir):
 
 def evaluate():
         
-    embedding_directory ="Embeddings/"
-    graph_directory = "Mesh_Graphs/"
-    output_directory ="Output/"
+    embedding_directory ="evaluate/Embeddings/"
+    graph_directory = "evaluate/Mesh_Graphs/"
+    output_directory ="evaluate/Output/"
 
     # netG_path = "Models/MESH2IR/netG_epoch_175.pth"
     # mesh_net_path = "Models/MESH2IR/mesh_net_epoch_175.pth"
     # netG_path = "Models/MESH2IR/netG_epoch_24.pth"
     # mesh_net_path = "Models/MESH2IR/mesh_net_epoch_24.pth"
-    netG_path = "Models/MESH2IR-D-EDR/netG_epoch_483.pth"
-    mesh_net_path = "Models/MESH2IR-D-EDR/mesh_net_epoch_483.pth"
+    netG_path = "evaluate/Models/MESH2IR-D-EDR/netG_epoch_483.pth"
+    mesh_net_path = "evaluate/Models/MESH2IR-D-EDR/mesh_net_epoch_483.pth"
     gpus =[0]
 
     batch_size = 128
