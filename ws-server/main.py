@@ -145,14 +145,9 @@ async def on_set_room_mesh_message(obj_string):
     global mesh_embedding
     mesh_embedding = torch.nn.parallel.data_parallel(mesh_net, data, [gpus[0]])
 
-    print("Waiting for room mesh to be set - done")
-    print("Waiting for client to request RIRs ...")
-
 async def handle_websocket(websocket, path):
     global ws
-    if ws is None:
-        ws = websocket
-        print("Waiting for room mesh to be set ...")
+    ws = websocket
 
     async for message in websocket:
         try:
