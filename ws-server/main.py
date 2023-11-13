@@ -108,6 +108,8 @@ async def on_request_rir_message(positions):
     print("Processing RIR request - done")
 
 async def on_set_room_mesh_message(obj_string):
+    print("Processing room mesh ...")
+
     # Parse .obj data string.
     vertices = []
     faces = []
@@ -144,6 +146,9 @@ async def on_set_room_mesh_message(obj_string):
 
     global mesh_embedding
     mesh_embedding = torch.nn.parallel.data_parallel(mesh_net, data, [gpus[0]])
+
+    print("Processing room mesh - done")
+
 
 async def handle_websocket(websocket, path):
     global ws
